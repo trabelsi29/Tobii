@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.10.1\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" />
+  <Import Project="..\packages\NUnit3TestAdapter.3.10.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.10.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\xunit.runner.console.2.3.1\build\xunit.runner.console.props" Condition="Exists('..\packages\xunit.runner.console.2.3.1\build\xunit.runner.console.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{881E0E8C-3172-4E77-A7C1-2514B77DABC8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjetTII</RootNamespace>
+    <AssemblyName>ProjetTII</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EyeXFramework, Version=1.8.503.0, Culture=neutral, PublicKeyToken=70326046dcdce6cb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tobii.EyeX.Framework.1.8.503\lib\net40\EyeXFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Raspberry.IO, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Raspberry.IO.GeneralPurpose.2.4\lib\net40\Raspberry.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Raspberry.IO.GeneralPurpose, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Raspberry.IO.GeneralPurpose.2.4\lib\net40\Raspberry.IO.GeneralPurpose.dll</HintPath>
+    </Reference>
+    <Reference Include="Raspberry.IO.Interop, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Raspberry.IO.GeneralPurpose.2.4\lib\net40\Raspberry.IO.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Raspberry.System, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Raspberry.System.2.1\lib\net40\Raspberry.System.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.2.2.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.2.2\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Shaman.CurlSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0988ad0e0927f547, processorArchitecture=MSIL">
+      <HintPath>..\packages\Shaman.CurlSharp.0.6.3.1\lib\net46\Shaman.CurlSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tobii.EyeX.Client.Net20, Version=1.8.504.0, Culture=neutral, PublicKeyToken=70326046dcdce6cb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tobii.EyeX.Client.1.8.504\lib\net20\Tobii.EyeX.Client.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="Tobii.Interaction.Model, Version=0.7.3.333, Culture=neutral, PublicKeyToken=70326046dcdce6cb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tobii.Interaction.0.7.3\lib\net45\Tobii.Interaction.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Tobii.Interaction.Net, Version=0.7.3.333, Culture=neutral, PublicKeyToken=70326046dcdce6cb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tobii.Interaction.0.7.3\lib\net45\Tobii.Interaction.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Tobii.Research, Version=1.4.0.926, Culture=neutral, PublicKeyToken=70326046dcdce6cb, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tobii.Research.x86.1.4.0.926\lib\net45\Tobii.Research.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.12.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WpfAnimatedGif, Version=1.4.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.1.4.15\lib\net\WpfAnimatedGif.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="chauffage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chauffage.Designer.cs">
+      <DependentUpon>chauffage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstPage.Designer.cs">
+      <DependentUpon>FirstPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="musique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="musique.Designer.cs">
+      <DependentUpon>musique.cs</DependentUpon>
+    </Compile>
+    <Compile Include="porte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="porte.Designer.cs">
+      <DependentUpon>porte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Temperature.cs" />
+    <Compile Include="Tobii\Tobii.StreamEngine.Interop.cs" />
+    <Compile Include="Volets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Volets.Designer.cs">
+      <DependentUpon>Volets.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="chauffage.resx">
+      <DependentUpon>chauffage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstPage.resx">
+      <DependentUpon>FirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="musique.resx">
+      <DependentUpon>musique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="porte.resx">
+      <DependentUpon>porte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Volets.resx">
+      <DependentUpon>Volets.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="tobii.interaction.0.7.3.nupkg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TobiiUnitySDKForDesktop_3.0.8_Beta %281%29.unitypackage" />
+    <None Include="Tobii\API-Reference.pdf" />
+    <None Include="Tobii\SDK-License_en.pdf" />
+    <None Include="Tobii\SDK-License_zh.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.1 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tobii.EyeX.Client.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-loading.gif" />
+    <None Include="Resources\loader.gif" />
+    <None Include="Resources\loader1.gif" />
+    <None Include="Resources\ajax-loader.gif" />
+    <None Include="Resources\salvat2.gif" />
+    <None Include="Resources\salvat3.gif" />
+    <None Include="Resources\29-bulb.gif" />
+    <None Include="Resources\LumEteinte.gif" />
+    <None Include="Resources\humide.png" />
+    <Content Include="Tobii.Common.ClrExtensions.dll" />
+    <Content Include="Tobii.Common.Hooks.dll" />
+    <Content Include="Tobii.Common.Input.BackparsingEngine.dll" />
+    <Content Include="Tobii.Common.Input.dll" />
+    <Content Include="Tobii.Common.Interop.dll" />
+    <Content Include="Tobii.Common.KeyValuePair.dll" />
+    <Content Include="Tobii.Common.Lifetime.dll" />
+    <Content Include="Tobii.Common.Logging.dll" />
+    <Content Include="Tobii.Common.Mathematics.dll" />
+    <Content Include="Tobii.Common.Processes.dll" />
+    <Content Include="Tobii.Common.Timing.dll" />
+    <Content Include="Tobii.EyeX.Automation.dll" />
+    <Content Include="Tobii.EyeX.Branding.dll" />
+    <Content Include="Tobii.EyeX.Client.Interop.dll" />
+    <Content Include="Tobii.EyeX.Common.dll" />
+    <Content Include="Tobii.EyeX.Common.Interop.dll" />
+    <Content Include="Tobii.EyeX.Common.WindowsCache.dll" />
+    <Content Include="Tobii.EyeX.Common.WindowsCacheBridge.dll" />
+    <Content Include="Tobii.EyeX.Config.dll" />
+    <Content Include="Tobii.EyeX.EyeTracking.dll" />
+    <Content Include="Tobii.EyeX.Framework.dll" />
+    <Content Include="Tobii.EyeX.Integration.Framework.dll" />
+    <Content Include="Tobii.EyeX.Interaction.Core.dll" />
+    <Content Include="Tobii.EyeX.Interaction.Extensions2.dll" />
+    <Content Include="Tobii.EyeX.Interaction.Foundation.dll" />
+    <Content Include="Tobii.EyeX.Interaction.Modules.JustType.dll" />
+    <Content Include="Tobii.EyeX.Interaction.Modules.KeyboardLight.dll" />
+    <Content Include="Tobii.EyeX.Interaction.Modules.Pointers.dll" />
+    <Content Include="Tobii.EyeX.Interaction.Modules.PrecisionTouchpad.dll" />
+    <Content Include="Tobii.EyeX.Interaction.Modules.Presence.dll" />
+    <Content Include="Tobii.EyeX.Interaction.Modules.TouchPad.dll" />
+    <Content Include="Tobii.EyeX.Interaction.Modules.WindowsCore.dll" />
+    <Content Include="Tobii.EyeX.Interaction.PtpDriverClient.dll" />
+    <Content Include="Tobii.EyeX.Interaction.Settings.dll" />
+    <Content Include="Tobii.EyeX.Interaction.Statistics.dll" />
+    <Content Include="Tobii.EyeX.Interaction.UI.Common.dll" />
+    <Content Include="Tobii.EyeX.Mediation.dll" />
+    <Content Include="Tobii.HockeyApp.Core45.dll" />
+    <Content Include="Tobii.HockeyApp.Kit.dll" />
+    <Content Include="Tobii.Interaction.Model.dll" />
+    <Content Include="Tobii.Interaction.Net.dll" />
+    <Content Include="Tobii.Statistics.Client.NET45.dll" />
+    <Content Include="Tobii.Statistics.Client.PCL.dll" />
+    <Content Include="Tobii.UpdateService.Interface.dll" />
+    <Content Include="Tobii.Voucher.Client.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\xunit.analyzers.0.9.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Tobii.Research.x86.1.4.0.926\build\Tobii.Research.x86.targets" Condition="Exists('..\packages\Tobii.Research.x86.1.4.0.926\build\Tobii.Research.x86.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Tobii.Research.x86.1.4.0.926\build\Tobii.Research.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Tobii.Research.x86.1.4.0.926\build\Tobii.Research.x86.targets'))" />
+    <Error Condition="!Exists('..\packages\Tobii.EyeX.Client.1.8.504\build\Tobii.EyeX.Client.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Tobii.EyeX.Client.1.8.504\build\Tobii.EyeX.Client.targets'))" />
+    <Error Condition="!Exists('..\packages\Tobii.Interaction.0.7.3\build\Tobii.Interaction.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Tobii.Interaction.0.7.3\build\Tobii.Interaction.targets'))" />
+    <Error Condition="!Exists('..\packages\Tobii.StreamEngine.2.2.2.363\build\Tobii.StreamEngine.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Tobii.StreamEngine.2.2.2.363\build\Tobii.StreamEngine.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\packages\Tobii.StreamEngine.Native.2.2.2.363\build\Tobii.StreamEngine.Native.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Tobii.StreamEngine.Native.2.2.2.363\build\Tobii.StreamEngine.Native.targets'))" />
+    <Error Condition="!Exists('..\packages\xunit.runner.console.2.3.1\build\xunit.runner.console.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.runner.console.2.3.1\build\xunit.runner.console.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.10.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.10.0\build\net35\NUnit3TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.10.1\build\NUnit.props'))" />
+  </Target>
+  <Import Project="..\packages\Tobii.EyeX.Client.1.8.504\build\Tobii.EyeX.Client.targets" Condition="Exists('..\packages\Tobii.EyeX.Client.1.8.504\build\Tobii.EyeX.Client.targets')" />
+  <Import Project="..\packages\Tobii.Interaction.0.7.3\build\Tobii.Interaction.targets" Condition="Exists('..\packages\Tobii.Interaction.0.7.3\build\Tobii.Interaction.targets')" />
+  <Import Project="..\packages\Tobii.StreamEngine.2.2.2.363\build\Tobii.StreamEngine.targets" Condition="Exists('..\packages\Tobii.StreamEngine.2.2.2.363\build\Tobii.StreamEngine.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\packages\Tobii.StreamEngine.Native.2.2.2.363\build\Tobii.StreamEngine.Native.targets" Condition="Exists('..\packages\Tobii.StreamEngine.Native.2.2.2.363\build\Tobii.StreamEngine.Native.targets')" />
+</Project>
