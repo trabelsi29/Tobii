@@ -18,15 +18,31 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
 using WpfAnimatedGif.Decoding;
+using System.Speech;
+using System.Speech.Synthesis;
 //using Tobii.Gaming;
 
 namespace ProjetTII
 {
     public partial class FirstPage : Form
     {
+
+        public SpeechSynthesizer parole = new SpeechSynthesizer();
+
         public FirstPage()
         {
             InitializeComponent();
+            
+        }
+
+        public bool verifvoix(string voix)
+        {
+            foreach (InstalledVoice unevoix in parole.GetInstalledVoices()) // Je liste les voix installées
+            {
+                if (unevoix.VoiceInfo.Name == voix) // Je vérifie ici que la voix est égale à celle de la variable voix
+                    return true; // Si la voix correspond bien alors la fonction retourne true
+            }
+            return false; // Je renvoi la valeur false si la voix ne correspond pas
         }
 
         private void FirstPage_Load(object sender, EventArgs e)
@@ -40,6 +56,13 @@ namespace ProjetTII
             {
                 salvator.Text = "Bonsoir  Salvatore ! ";
             }
+            SpeechSynthesizer parole = new SpeechSynthesizer();
+            string voix = "ScanSoft Virginie_Dri40_16kHz";
+            if (verifvoix(voix)) // Si la voix est installée
+                parole.SelectVoice(voix); // Alors on l'utilise
+
+            parole.SpeakAsync(salvator.Text);
+
         }
 
         private void button1_Click(object sender, EventArgs e)

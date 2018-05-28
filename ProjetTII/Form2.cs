@@ -21,18 +21,30 @@ using System.IO;
 using System.Threading;
 using System.Timers;
 using Newtonsoft.Json.Linq;
+using System.Speech;
+using System.Speech.Synthesis;
+
 
 namespace ProjetTII
 {
     public partial class Form2 : Form
     {
-       public Form2()
+
+
+        public SpeechSynthesizer parole = new SpeechSynthesizer();
+
+        public Form2()
         {
             InitializeComponent();
-           /* timer.Interval = 1000; //si non défini auparavant
-            timer.Enabled = true;*/
+            /* timer.Interval = 1000; //si non défini auparavant
+             timer.Enabled = true;*/
+            SpeechSynthesizer parole = new SpeechSynthesizer();
+           
 
-        }             
+
+        }
+
+        
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -82,10 +94,19 @@ namespace ProjetTII
                  toggleLight2 = true;
              }
          }*/
+        public bool verifvoix(string voix)
+        {
+            foreach (InstalledVoice unevoix in parole.GetInstalledVoices()) // Je liste les voix installées
+            {
+                if (unevoix.VoiceInfo.Name == voix) // Je vérifie ici que la voix est égale à celle de la variable voix
+                    return true; // Si la voix correspond bien alors la fonction retourne true
+            }
+            return false; // Je renvoi la valeur false si la voix ne correspond pas
+        }
 
 
         private void button1_Click(object sender, EventArgs e)
-        { 
+        { /*
             // Open request and set post data
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://10.194.69.214:3671/dimmers/set_level");
             request.Method = "POST";
@@ -105,15 +126,22 @@ namespace ProjetTII
             WebResponse response = request.GetResponse();
 
             // Status for debugging
+            // Status for debugging
             string ResponseStatus = (((HttpWebResponse)response).StatusDescription);
 
             // Get the content from server and read it from the stream
             s = response.GetResponseStream();
             StreamReader reader = new StreamReader(s);
-            string responseFromServer = reader.ReadToEnd();
+            string responseFromServer = reader.ReadToEnd();*/
+            string voix = "ScanSoft Virginie_Dri40_16kHz";
+            if (verifvoix(voix)) // Si la voix est installée
+                parole.SelectVoice(voix); // Alors on l'utilise
 
-           
-          statut_lumiere.Text = "Lumière allumée ! ";
+            parole.SpeakAsync(champtexte1.Text);
+           // parole.SelectVoice("Microsoft Server Speech Text to Speech Voice (fr-FR, Hortense)");
+
+          
+            statut_lumiere.Text = "Lumière allumée ! ";
         }
        /* public class RootObject
         {
@@ -131,7 +159,7 @@ namespace ProjetTII
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
+        {/*
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://10.194.69.214:3671/dimmers/set_level");
             request.Method = "POST";
             request.ContentType = "application/json";
@@ -159,7 +187,12 @@ namespace ProjetTII
 
 
          
+            */
+            string voix = "ScanSoft Virginie_Dri40_16kHz";
+            if (verifvoix(voix)) // Si la voix est installée
+                parole.SelectVoice(voix); // Alors on l'utilise
 
+            parole.SpeakAsync(champtexte2.Text);
 
             statut_lumiere.Text = "Lumière éteinte !";
             
@@ -173,6 +206,11 @@ namespace ProjetTII
         }
 
         private void m_statusB1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

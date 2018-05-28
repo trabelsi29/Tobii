@@ -36,6 +36,8 @@
             this.m_statusB2 = new System.Windows.Forms.Label();
             this.statut_lumiere = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.champtexte1 = new System.Windows.Forms.RichTextBox();
+            this.champtexte2 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,7 +120,7 @@
             this.statut_lumiere.Font = new System.Drawing.Font("Dream Orphans", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statut_lumiere.Location = new System.Drawing.Point(829, 628);
             this.statut_lumiere.Name = "statut_lumiere";
-            this.statut_lumiere.Size = new System.Drawing.Size(0, 57);
+            this.statut_lumiere.Size = new System.Drawing.Size(0, 58);
             this.statut_lumiere.TabIndex = 11;
             // 
             // pictureBox1
@@ -131,13 +133,36 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // champtexte1
+            // 
+            this.champtexte1.Location = new System.Drawing.Point(781, 528);
+            this.champtexte1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.champtexte1.Name = "champtexte1";
+            this.champtexte1.Size = new System.Drawing.Size(420, 78);
+            this.champtexte1.TabIndex = 13;
+            this.champtexte1.Text = "La lumière est allumée";
+            this.champtexte1.Visible = false;
+            this.champtexte1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // champtexte2
+            // 
+            this.champtexte2.Location = new System.Drawing.Point(781, 628);
+            this.champtexte2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.champtexte2.Name = "champtexte2";
+            this.champtexte2.Size = new System.Drawing.Size(420, 78);
+            this.champtexte2.TabIndex = 14;
+            this.champtexte2.Text = "La lumière est éteinte";
+            this.champtexte2.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1862, 855);
+            this.ClientSize = new System.Drawing.Size(1710, 844);
+            this.Controls.Add(this.champtexte2);
+            this.Controls.Add(this.champtexte1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statut_lumiere);
             this.Controls.Add(this.m_statusB2);
@@ -164,5 +189,7 @@
         private System.Windows.Forms.Label m_statusB2;
         private System.Windows.Forms.Label statut_lumiere;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RichTextBox champtexte1;
+        private System.Windows.Forms.RichTextBox champtexte2;
     }
 }

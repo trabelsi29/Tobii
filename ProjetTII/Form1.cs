@@ -33,8 +33,8 @@ namespace ProjetTII
         {
           
             InitializeComponent();
-            String TempActuelle = Temperature("");
-            label1.Text = TempActuelle;
+           /* String TempActuelle = Temperature("");
+            label1.Text = TempActuelle;*/
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -58,16 +58,16 @@ namespace ProjetTII
             /*String a = Temperature("");
              label1.Text =a;      */
 
-
+            /*
 
             var adr = "http://10.194.69.214:3671/sensors/2/get_all_measures";
             var json2 = new WebClient().DownloadString(adr);
             var hum = JsonConvert.DeserializeObject<RootObject>(json2);
 
             double humidite = hum.humidity;
-            label4.Text = "Humidité : 17.2"+ humidite.ToString();
+            label4.Text = "Humidité : 17.2"+ humidite.ToString(); 
 
-       
+       */
 
         }
         public class RootObject
@@ -76,7 +76,7 @@ namespace ProjetTII
             public double humidity { get; set; }
 
         }
-
+        /*
          public String Temperature(String t)
         {
             
@@ -98,7 +98,7 @@ namespace ProjetTII
             
             return (t);
 
-        }
+        }*/
         
 
         private void Button1_Click(object sender, EventArgs e)
