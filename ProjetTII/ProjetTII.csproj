@@ -129,11 +129,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="chauffage.cs">
+    <Compile Include="Chauff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="chauffage.Designer.cs">
-      <DependentUpon>chauffage.cs</DependentUpon>
+    <Compile Include="Chauff.Designer.cs">
+      <DependentUpon>Chauff.cs</DependentUpon>
     </Compile>
     <Compile Include="FirstPage.cs">
       <SubType>Form</SubType>
@@ -159,6 +159,18 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
     <Compile Include="musique.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,8 +193,8 @@
     <Compile Include="Volets.Designer.cs">
       <DependentUpon>Volets.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="chauffage.resx">
-      <DependentUpon>chauffage.cs</DependentUpon>
+    <EmbeddedResource Include="Chauff.resx">
+      <DependentUpon>Chauff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FirstPage.resx">
       <DependentUpon>FirstPage.cs</DependentUpon>
@@ -195,6 +207,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="musique.resx">
       <DependentUpon>musique.cs</DependentUpon>
@@ -285,6 +303,7 @@
     <None Include="Resources\29-bulb.gif" />
     <None Include="Resources\LumEteinte.gif" />
     <None Include="Resources\humide.png" />
+    <None Include="Resources\equalizer.gif" />
     <Content Include="Tobii.Common.ClrExtensions.dll" />
     <Content Include="Tobii.Common.Hooks.dll" />
     <Content Include="Tobii.Common.Input.BackparsingEngine.dll" />

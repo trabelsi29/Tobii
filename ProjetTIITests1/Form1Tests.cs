@@ -18,13 +18,7 @@ namespace ProjetTII.Tests
         }
 
         [TestMethod()]
-        public void Label1_Click_1Test()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void Form1Test1()
+        public void TemperatureTest()
         {
             Assert.Fail();
         }
@@ -33,24 +27,6 @@ namespace ProjetTII.Tests
         public void label1_Click_1Test()
         {
             Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void Form1Test2()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void TemperatureTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void TemperatureTest1()
-        {
-            throw new NotImplementedException();
         }
     }
 }

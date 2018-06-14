@@ -20,6 +20,7 @@ using System.Windows.Media;
 using WpfAnimatedGif.Decoding;
 using System.Speech;
 using System.Speech.Synthesis;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 //using Tobii.Gaming;
 
 namespace ProjetTII
@@ -35,7 +36,7 @@ namespace ProjetTII
             
         }
 
-        public bool verifvoix(string voix)
+        public bool Verifvoix(string voix)
         {
             foreach (InstalledVoice unevoix in parole.GetInstalledVoices()) // Je liste les voix installées
             {
@@ -47,6 +48,9 @@ namespace ProjetTII
 
         private void FirstPage_Load(object sender, EventArgs e)
         {
+            button1.MouseEnter += new EventHandler(Timer1);
+
+
             if (DateTime.Now.Hour >= 9 && DateTime.Now.Hour < 18)
             {
                 salvator.Text = "Bonjour Salvatore ! ";
@@ -58,15 +62,27 @@ namespace ProjetTII
             }
             SpeechSynthesizer parole = new SpeechSynthesizer();
             string voix = "ScanSoft Virginie_Dri40_16kHz";
-            if (verifvoix(voix)) // Si la voix est installée
+            if (Verifvoix(voix)) // Si la voix est installée
                 parole.SelectVoice(voix); // Alors on l'utilise
 
             parole.SpeakAsync(salvator.Text);
 
         }
+        Timer chrono = new Timer();
+
+        private void Timer1(object sender, EventArgs e)
+        {
+
+            chrono.Interval = 3000;
+            chrono.Start(); // Enable timer.
+            chrono.Tick += new EventHandler(button1_Click);
+
+        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.chrono.Stop();
             Form1 f1 = new Form1();
             f1.Show();
             this.Hide();

@@ -47,7 +47,6 @@ C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\Proje
 C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTII\bin\Debug\WpfAnimatedGif.dll
 C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTII\bin\Debug\WpfAnimatedGif.xml
 C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTII\obj\Debug\ProjetTII.porte.resources
-C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTII\obj\Debug\ProjetTII.chauffage.resources
 C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTII\obj\Debug\ProjetTII.telephone.resources
 C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTII\bin\Debug\NUnit3.TestAdapter.dll
 C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTII\bin\Debug\NUnit3.TestAdapter.pdb
@@ -59,3 +58,6 @@ C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\Proje
 C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTII\bin\Debug\nunit.framework.dll
 C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTII\bin\Debug\nunit.framework.pdb
 C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTII\bin\Debug\nunit.framework.xml
+C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTII\obj\Debug\ProjetTII.TV.resources
+C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTII\obj\Debug\ProjetTII.Chauff.resources
+C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTII\obj\Debug\ProjetTII.Chauffage.resources

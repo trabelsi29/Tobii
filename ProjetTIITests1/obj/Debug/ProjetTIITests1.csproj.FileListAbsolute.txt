@@ -32,3 +32,4 @@ C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\Proje
 C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTIITests1\obj\Debug\ProjetTIITests1.csproj.CoreCompileInputs.cache
 C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTIITests1\obj\Debug\ProjetTIITests1.dll
 C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTIITests1\obj\Debug\ProjetTIITests1.pdb
+C:\Users\trabe\Documents\3eme Semestre\Projet Transversal II\InterfaceUser\ProjetTII\ProjetTIITests1\bin\Debug\ProjetTIITests1.dll.config

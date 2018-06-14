@@ -93,6 +93,16 @@ namespace ProjetTII.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap equalizer {
+            get {
+                object obj = ResourceManager.GetObject("equalizer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap humide {
             get {
                 object obj = ResourceManager.GetObject("humide", resourceCulture);

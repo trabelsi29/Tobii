@@ -209,11 +209,11 @@
             this.textMusique.AutoSize = true;
             this.textMusique.BackColor = System.Drawing.Color.Transparent;
             this.textMusique.Font = new System.Drawing.Font("Dream Orphans", 22F, System.Drawing.FontStyle.Bold);
-            this.textMusique.Location = new System.Drawing.Point(1646, 346);
+            this.textMusique.Location = new System.Drawing.Point(1693, 346);
             this.textMusique.Name = "textMusique";
-            this.textMusique.Size = new System.Drawing.Size(250, 45);
+            this.textMusique.Size = new System.Drawing.Size(148, 45);
             this.textMusique.TabIndex = 23;
-            this.textMusique.Text = "Musique/Radio";
+            this.textMusique.Text = "Musique";
             // 
             // pictureBox1
             // 
@@ -277,6 +277,7 @@
             this.chauffage.Size = new System.Drawing.Size(345, 355);
             this.chauffage.TabIndex = 30;
             this.chauffage.UseVisualStyleBackColor = false;
+            this.chauffage.Click += new System.EventHandler(this.chauffage_Click);
             // 
             // label4
             // 
